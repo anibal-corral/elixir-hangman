@@ -17,4 +17,11 @@ alias Hangman.Impl.Game
     assert game.game_state == :initializing
     assert game.letters == ["A", "n", "a", "i", "s"]
   end
+  test "New game returns each letters is lowercase" do
+    game = Game.new_game()
+
+assert Enum.join(game.letters) == String.downcase(Enum.join(game.letters))
+
+  end
+
 end
