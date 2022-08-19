@@ -13,9 +13,9 @@ defdelegate new_game, to: Game
 #   Game.new_game()
 # end
 @spec make_move(game, String.t) :: { game, Type.tally }
-def make_move(_game, _guess) do
-
-end
+defdelegate make_move(game, guess), to: Game
+# def make_move(game, guess) do
+# end
 
 @spec sum(integer, integer) :: integer
 def sum(a,b) do
