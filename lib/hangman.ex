@@ -21,4 +21,7 @@ defdelegate make_move(game, guess), to: Game
 def sum(a,b) do
   a+b
 end
+
+@spec tally(game) :: Type.tally()
+defdelegate tally(game), to: Game
 end
