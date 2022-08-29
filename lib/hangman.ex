@@ -14,7 +14,7 @@ defmodule Hangman do
 #   Game.new_game()
 # end
 def new_game() do
-  {:ok, pid} = Server.start_link()
+  {:ok, pid} = Hangman.Runtime.Application.start_game()
   pid
 end
 @spec make_move(game, String.t) :: { game, Type.tally }

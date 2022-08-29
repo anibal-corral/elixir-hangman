@@ -7,11 +7,12 @@ defmodule Hangman.Runtime.Server do
   # THis is for starting the generic server
   #Client Process
 
-  def start_link do
+  def start_link(_) do
     GenServer.start_link(__MODULE__, nil)
   end
 
   #Server process
+  @spec init(any) :: {:ok, Hangman.Impl.Game.t()}
   def init(_) do
     #the Job is returning a tuple with the ok and the state
     {:ok, Game.new_game} #Here the state is the hangman game
