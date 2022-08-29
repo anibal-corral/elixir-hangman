@@ -17,7 +17,7 @@ def new_game() do
   {:ok, pid} = Hangman.Runtime.Application.start_game()
   pid
 end
-@spec make_move(game, String.t) :: { game, Type.tally }
+@spec make_move(game, String.t) ::  Type.tally
 # defdelegate make_move(game, guess), to: Game
 # def make_move(game, guess) do
 # end
