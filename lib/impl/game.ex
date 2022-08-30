@@ -1,9 +1,10 @@
 defmodule Hangman.Impl.Game do
-  alias Hangman.Type, as: Type
+  # alias Hangman.Type, as: Type
+  alias Hangman.Type
 
   @type t :: %Hangman.Impl.Game{
     turns_left: integer,
-    game_state: Type.state(),
+    game_state: Hangman.state(),
     letters: list(String.t),
     used: MapSet.t(String.t)
   }
